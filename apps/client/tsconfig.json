@@ -1,0 +1,14 @@
+{
+  "extends": "tsconfig/tsconfig.client.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "../server/tsconfig.json" }
+  ]
+}

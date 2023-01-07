@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "composite": true,
+    "incremental": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "build/client",
+    "tsBuildInfoFile": ".client.tsbuildinfo"
+  }
+}

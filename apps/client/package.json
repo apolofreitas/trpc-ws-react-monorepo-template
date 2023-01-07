@@ -1,0 +1,31 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "preview": "vite preview",
+    "dev": "vite",
+    "build": "vite build",
+    "build-types": "tsc --build",
+    "clean-types": "tsc --build --clean",
+    "type-check": "run-s -c build-types clean-types",
+    "lint": "eslint --max-warnings=0 .",
+    "lint:fix": "eslint --max-warnings=0 --fix ."
+  },
+  "dependencies": {
+    "@trpc/client": "^10.7.0",
+    "@trpc/server": "^10.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "superjson": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vite-tsconfig-paths": "^4.0.3"
+  }
+}

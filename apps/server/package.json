@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node build/main.js",
+    "dev": "nodemon src/main.ts",
+    "test": "c8 ava",
+    "test:watch": "ava --watch",
+    "build": "swc src -d build --copy-files --delete-dir-on-start",
+    "build-types": "tsc --build",
+    "clean-types": "tsc --build --clean",
+    "type-check": "run-s -c build-types clean-types",
+    "lint": "eslint --max-warnings=0 .",
+    "lint:fix": "eslint --max-warnings=0 --fix ."
+  },
+  "dependencies": {
+    "@trpc/server": "^10.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "superjson": "^1.12.1",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.5.4",
+    "@swc/cli": "^0.1.59",
+    "@swc/core": "^1.3.24",
+    "@types/node": "^18.11.18",
+    "@types/ws": "^8.5.4",
+    "ava": "^5.1.0",
+    "c8": "^7.12.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": "~18"
+  }
+}

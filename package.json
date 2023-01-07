@@ -1,0 +1,30 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "yarn@1.22.19",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "nohoist": [
+    "**"
+  ],
+  "scripts": {
+    "start": "turbo run start --parallel",
+    "build": "turbo run build",
+    "type-check": "turbo run type-check",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write --ignore-unknown \"**/*\""
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
